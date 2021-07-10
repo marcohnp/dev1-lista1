@@ -55,7 +55,8 @@ public class CalculadoraModel {
         if (this == o) return true;
         if (!(o instanceof CalculadoraModel)) return false;
         CalculadoraModel that = (CalculadoraModel) o;
-        return Objects.equals(numero1, that.numero1) && Objects.equals(numero2, that.numero2) && Objects.equals(operacao, that.operacao) && Objects.equals(resultado, that.resultado);
+        return Objects.equals(numero1, that.numero1) && Objects.equals(numero2, that.numero2)
+                && Objects.equals(operacao, that.operacao) && Objects.equals(resultado, that.resultado);
     }
 
     @Override

@@ -11,6 +11,7 @@ public class CalculadoraFacade {
 
     @Autowired
     private CalculadoraService calculadoraService;
+
     public CalculadoraResponse calcula(String operacao, Double n1, Double n2) {
         return CalculadoraMapper.mapToResponse(calculadoraService.calcula(operacao, n1, n2));
     }

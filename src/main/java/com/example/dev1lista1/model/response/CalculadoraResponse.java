@@ -57,7 +57,8 @@ public class CalculadoraResponse {
         if (this == o) return true;
         if (!(o instanceof CalculadoraResponse)) return false;
         CalculadoraResponse that = (CalculadoraResponse) o;
-        return Objects.equals(numero1, that.numero1) && Objects.equals(numero2, that.numero2) && operacao == that.operacao && Objects.equals(resultado, that.resultado);
+        return Objects.equals(numero1, that.numero1) && Objects.equals(numero2, that.numero2)
+                && operacao == that.operacao && Objects.equals(resultado, that.resultado);
     }
 
     @Override
