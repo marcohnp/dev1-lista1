@@ -1,5 +1,7 @@
 package com.example.dev1lista1.model.response;
 
+import java.util.Objects;
+
 public class ImcResponse {
 
     private Double peso;
@@ -47,5 +49,19 @@ public class ImcResponse {
 
     public void setClassificacao(String classificacao) {
         this.classificacao = classificacao;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof ImcResponse)) return false;
+        ImcResponse that = (ImcResponse) o;
+        return Objects.equals(peso, that.peso) && Objects.equals(altura, that.altura)
+                && Objects.equals(imc, that.imc) && Objects.equals(classificacao, that.classificacao);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(peso, altura, imc, classificacao);
     }
 }

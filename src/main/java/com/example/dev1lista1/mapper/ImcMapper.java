@@ -8,7 +8,7 @@ public class ImcMapper {
 
     public static ImcResponse mapToResponse(ImcModel model) {
         if (ObjectUtils.isEmpty(model)) return null;
-        ImcResponse response = new ImcResponse();
+        var response = new ImcResponse();
         response.setPeso(model.getPeso());
         response.setAltura(model.getAltura());
         response.setImc(model.getImc());
