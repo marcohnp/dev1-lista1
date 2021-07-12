@@ -29,8 +29,8 @@ class CalculadoraFacadeTest {
     @Test
     void calcula_deve_retornar_calculadoraResponse_quando_uma_request_for_valida(){
         when(service.calcula(any(), any(), any())).thenReturn(CalculadoraModelStub.createCalculadoraModelStub());
-        assertEquals(CalculadoraResponseStub.createCalculadoraResponseStub(), facade.calcula(any(), any(), any()));
-        verify(service, times(1)).calcula(any(), any(), any());
+        assertEquals(CalculadoraResponseStub.createCalculadoraResponseStub(), facade.calcula("adicao", 10.0, 5.0));
+        verify(service, times(1)).calcula("adicao", 10.0, 5.0);
     }
 
     @Test

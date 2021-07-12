@@ -27,8 +27,8 @@ class DiaSemanaFacadeTest {
     @Test
     void retornaDiaSemana_deve_retornar_diaSemanaResponse_quando_uma_request_for_valida() {
         when(service.retornaDiaSemana(any(), any(), any())).thenReturn(DiaSemanaModelStub.createDiaSemanaModelStub());
-        assertEquals(DiaSemanaResponseStub.createDiaSemanaResponseStub(), facade.retornaDiaSemana(any(), any(), any()));
-        verify(service, times(1)).retornaDiaSemana(any(), any(), any());
+        assertEquals(DiaSemanaResponseStub.createDiaSemanaResponseStub(), facade.retornaDiaSemana(2021, 7, 10));
+        verify(service, times(1)).retornaDiaSemana(2021, 7, 10);
     }
 
     @Test

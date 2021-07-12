@@ -26,7 +26,7 @@ class ImcFacadeTest {
     @Test
     void retornaImc_deve_retonar_imcResponse_quando_uma_request_for_valida(){
         when(service.retornaImc(any(),any())).thenReturn(ImcModelStub.createImcModelStub());
-        assertEquals(ImcResponseStub.createImcResponseStub(),facade.retornaImc(any(), any()));
-        verify(service, times(1)).retornaImc(any(), any());
+        assertEquals(ImcResponseStub.createImcResponseStub(),facade.retornaImc(80.0, 1.75));
+        verify(service, times(1)).retornaImc(80.0, 1.75);
     }
 }
